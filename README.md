@@ -1,45 +1,36 @@
 ==============================
-Recunoaștere Număr Auto (OCR)
+Automatic License Plate Recognition (OCR)
 ==============================
 
-Acest program Windows permite utilizatorului să selecteze o imagine conținând un număr de înmatriculare auto, să ruleze OCR folosind Tesseract, și să verifice dacă numărul recunoscut este unul românesc valid. Interfața include și o temă automată zi/noapte.
+This Windows application allows users to select an image containing a vehicle license plate, run OCR using Tesseract, and verify whether the recognized number is a valid Romanian license plate. The interface also features an automatic day/night theme.
 
---------------
-1. CERINȚE
---------------
+1. REQUIREMENTSTo run this program, you will need:Operating System: Windows (7, 10, or 11)
+* A C compiler compatible with Windows API (e.g., MinGW or MSVC)
+* Tesseract OCR installed with English language support
+* Tesseract added to the system PATH variable (this is done automatically if you check the option during installation)
 
-Pentru a rula acest program, ai nevoie de:
 
-- Sistem de operare: Windows (7, 10, 11)
-- Un compilator C compatibil cu Windows API (ex: MinGW sau MSVC)
-- [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) instalat cu limba engleză activată
-- Tesseract adăugat în variabila de sistem PATH (se face automat dacă bifezi opțiunea la instalare)
 
---------------
-2. INSTALARE
---------------
+2. INSTALLATION
+1. Download and install the Tesseract executable:
+   * https://github.com/UB-Mannheim/tesseract/wiki
+   or use the installer attached in the folder.
 
-1. Descarcă și instalează EXECUTABILUL Tesseract:
-   https://github.com/UB-Mannheim/tesseract/wiki ori de aici, ori executabilul cel atasat in folder.
+   Make sure to:
+   * Check “Add to PATH” during installation
+   * Install the English language pack (enabled by default)
 
-   Asigură-te că:
-   - bifezi „Add to PATH”
-   - limba „eng” este instalată (implicită)
-2. Compilează fișierul `.c` cu MinGW.
+2. Compile the .c file using MinGW.
 
---------------
-3. UTILIZARE
---------------
 
-1.Ruleaza rec.exe
-2.Selecteaza 1 poza din cele atasate din folder pentru a recunoaste numarul de inmatriculare daca e valid sau nu.
-3.Programul iti va afisa automat textul citit si mesajul daca numarul este valid sau nu.
+3. USAGE
+   1. Run rec.exe
+   2. Select one of the sample images from the attached folder to test license plate recognition.
+   3. The program will automatically display the recognized text and indicate whether the license plate is valid or not.
 
---------------
-4. BUGURI COMUNE
---------------
+5. COMMON ISSUES
+* Error opening OCR result  
+  * Verify that tesseract.exe is correctly added to your system PATH.  
+  * Make sure the selected image is sharp and the license plate text is clearly visible.
 
- Dacă apare mesajul „Eroare la deschiderea rezultatului OCR”:
-   - Verifică dacă `tesseract.exe` se află în PATH
-   - Verifică dacă imaginea e clară și lizibilă
 
