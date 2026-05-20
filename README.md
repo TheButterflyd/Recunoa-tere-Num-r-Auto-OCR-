@@ -1,4 +1,4 @@
-==============================
+
 Automatic License Plate Recognition (OCR)
 ==============================
 
